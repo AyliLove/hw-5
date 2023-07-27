@@ -46,3 +46,21 @@ function playGameSeasons() {
     repeatGame = confirm("Желаете сыграть еще раз?");
   } while (repeatGame);
 }
+
+function playGameSeasons2() {
+  let words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+words = words.sort(() => Math.random() - 0.5);
+
+alert(words);
+
+let firstWord = prompt("Назови первый фрукт?");
+let lastWord = prompt("Назови последний фрукт?");
+
+if (firstWord === words[0] && lastWord === words[words.length - 1]) {
+  alert("Поздравляю, вы угадали оба элемента!");
+} else if (firstWord === words[0] || lastWord === words[words.length - 1]) {
+  alert("Вы были близки к победе!");
+} else {
+  alert("Вы ответили неверно.");
+}
+}
